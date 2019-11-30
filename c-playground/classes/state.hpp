@@ -38,23 +38,6 @@ public:
     return this;
   }
   
-  void introduceYourself() {
-    cout << "==State==" << endl;
-    printName();
-    printNeigbours();
-  }
-  
-  void printName() {
-    cout << "Name: " << name << endl;
-  }
-  
-  void printNeigbours() {
-    cout << "Neigbours: " << endl;
-    for (map<char, State*>::iterator it=neighbours.begin(); it!=neighbours.end(); ++it) {
-      std::cout << it->first << " => " << it->second->name << '\n';
-    }
-  }
-  
 };
 
 #endif /* state_hpp */

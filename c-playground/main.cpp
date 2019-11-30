@@ -25,7 +25,7 @@ bool validateInput(string input) {
 string getSequence() {
   string userInput;
   
-  cout << "Enter Sequence:";
+  cout << "Enter Sequence: ";
   cin >> userInput;
   
   if (validateInput(userInput)) {

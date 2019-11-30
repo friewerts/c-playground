@@ -72,24 +72,18 @@ public:
   
   void runSequence(string input) {
     getState(input);
-
-    cout << (showTransitions ? "\n" : "") << "Machine finished in state: " << currentState->name << endl;
     
     cout << "This is" << (inFinalState() ? "" : " not") << " the final state!" << endl;
   }
   
   void getState(string input) {
-    cout << currentState->name;
+    cout << (showTransitions ? currentState->name : "");
     for (char const &c: input) {
       currentState = currentState->transition(c);
       if (showTransitions) cout << " => " << currentState->name;
     }
+    cout << (showTransitions ? "\n" : "") << "Machine finished in state: " << currentState->name << endl;
   }
-  
-  void printname() {
-    cout << "My name is: " << name << endl;
-  }
-  
 };
 
 #endif /* automat_hpp */
