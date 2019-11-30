@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include "automat.hpp"
-#include "state.hpp"
 
 using namespace std;
 

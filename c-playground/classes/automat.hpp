@@ -12,8 +12,6 @@
 #include <stdio.h>
 #include <iostream>
 #include <map>
-#include <string>
-#include <iterator>
 #include "state.hpp"
 
 using namespace std;
