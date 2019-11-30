@@ -16,13 +16,18 @@ using namespace std;
 
 class State {
   
-public:
-  
+private:
   string name;
   map<char, State*> neighbours;
+  
+public:
 
   State(string name) {
     State::name = name;
+  }
+  
+  string getName() {
+    return name;
   }
   
   void addNeighbour(char name, State* newNeighbour) {
@@ -31,11 +36,8 @@ public:
   
   State* transition(char input) {
     bool hasNeigbour = neighbours.count(input) != 0;
-    if (hasNeigbour) {
-      return neighbours.find(input)->second;
-    }
-    
-    return this;
+
+    return hasNeigbour ? neighbours.find(input)->second : this;
   }
   
 };

@@ -77,12 +77,12 @@ public:
   }
   
   void getState(string input) {
-    cout << (showTransitions ? currentState->name : "");
+    cout << (showTransitions ? currentState->getName() : "");
     for (char const &c: input) {
       currentState = currentState->transition(c);
-      if (showTransitions) cout << " => " << currentState->name;
+      if (showTransitions) cout << " => " << currentState->getName();
     }
-    cout << (showTransitions ? "\n" : "") << "Machine finished in state: " << currentState->name << endl;
+    cout << (showTransitions ? "\n" : "") << "Machine finished in state: " << currentState->getName() << endl;
   }
 };
 
