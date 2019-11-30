@@ -21,13 +21,8 @@ int main(int argc, const char * argv[]) {
 //  Automat("2e").runSequence("110110101010010110100");
 
   string userInput = getInputSequence();
-  
-  Automat a1;
 
-  // optionaly show all Transitions
-  // a1.showTransitions = true;
-
-  a1.runSequence(userInput);
+  Automat("a1", true).runSequence(userInput);
   
   return 0;
 }

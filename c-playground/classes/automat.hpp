@@ -64,6 +64,12 @@ public:
     initStates();
   }
   
+  Automat(string name, bool showTransitions) {
+    Automat::name = name;
+    Automat::showTransitions = showTransitions;
+    initStates();
+  }
+  
   bool inFinalState() {
     return currentState == finalState;
   }
