@@ -7,28 +7,10 @@
 //
 
 #include <iostream>
+#include "automat.hpp"
+#include "state.hpp"
 
 using namespace std;
-
-class Automat {
-  
-public:
-  Automat() {
-    name = "Default Automat";
-  }
-  
-  Automat(string name) {
-    Automat::name = name;
-  }
-  
-  void printname() {
-    cout << "My name is: " << name;
-  }
-  
-private:
-  string name;
-  
-};
 
 int main(int argc, const char * argv[]) {
   
@@ -37,12 +19,7 @@ int main(int argc, const char * argv[]) {
   Automat a2("Automat 2");
   
   a1.printname();
+  a1.printStates();
 
-  cout << endl;
-
-  a2.printname();
-  
-  cout << endl;
-  
   return 0;
 }
