@@ -19,13 +19,40 @@ class State {
 public:
   
   string name;
+  map<char, State*> neighbours;
 
   State(string name) {
     State::name = name;
   }
   
-  void printname() {
-    cout << "State is: " << name << endl;
+  void addNeighbour(char name, State* newNeighbour) {
+    neighbours.insert(make_pair(name, newNeighbour));
+  }
+  
+  State* transition(char input) {
+    bool hasNeigbour = neighbours.count(input) != 0;
+    if (hasNeigbour) {
+      return neighbours.find(input)->second;
+    }
+    
+    return this;
+  }
+  
+  void introduceYourself() {
+    cout << "==State==" << endl;
+    printName();
+    printNeigbours();
+  }
+  
+  void printName() {
+    cout << "Name: " << name << endl;
+  }
+  
+  void printNeigbours() {
+    cout << "Neigbours: " << endl;
+    for (map<char, State*>::iterator it=neighbours.begin(); it!=neighbours.end(); ++it) {
+      std::cout << it->first << " => " << it->second->name << '\n';
+    }
   }
   
 };

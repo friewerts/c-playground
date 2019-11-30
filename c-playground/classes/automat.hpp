@@ -22,7 +22,34 @@ class Automat {
   
 private:
   string name;
-  std::map<string, State> stateMap;
+  State* currentState;
+  
+  void initStates() {
+    // initialize States
+    State* s1 = new State("A");
+    State* s2 = new State("B");
+    State* s3 = new State("C");
+    State* s4 = new State("D");
+    State* s5 = new State("E");
+
+    // Add Edges
+    s1->addNeighbour('0', s2);
+    s1->addNeighbour('1', s5);
+    
+    s2->addNeighbour('0', s3);
+    s2->addNeighbour('1', s5);
+    
+    s3->addNeighbour('0', s3);
+    s3->addNeighbour('1', s4);
+    
+    s4->addNeighbour('0', s4);
+    s4->addNeighbour('1', s3);
+    
+    s5->addNeighbour('0', s5);
+    s5->addNeighbour('1', s5);
+
+    currentState = s1;
+  }
   
 public:
   Automat() {
@@ -35,19 +62,15 @@ public:
     initStates();
   }
   
-  void printname() {
-    cout << "My name is: " << name << endl;
-  }
-
-  void printStates() {
-    cout << "My state is: " << stateMap.find("A")->second.name << endl;
+  void getState(string input) {
+    for (char const &c: input) {
+      currentState = currentState->transition(c);
+    }
+    cout << "The new State is: " << currentState->name << endl;
   }
   
-  void initStates() {
-    State s1("A");
-    State s2("B");
-    State s3("C");
-    stateMap.insert(make_pair("A", s2));
+  void printname() {
+    cout << "My name is: " << name << endl;
   }
   
 };
