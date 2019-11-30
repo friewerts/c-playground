@@ -40,15 +40,20 @@ string getSequence() {
 
 int main(int argc, const char * argv[]) {
 
-//  Automat("2a").getState("0011");
-//  Automat("2b").getState("0011110011010");
-//  Automat("2c").getState("01100100101");
-//  Automat("2d").getState("001111000011101");
-//  Automat("2e").getState("110110101010010110100");
+//  Automat("2a").runSequence("0011");
+//  Automat("2b").runSequence("0011110011010");
+//  Automat("2c").runSequence("01100100101");
+//  Automat("2d").runSequence("001111000011101");
+//  Automat("2e").runSequence("110110101010010110100");
 
   string userInput = getSequence();
   
-  Automat().getState(userInput);
+  Automat a1;
+
+  // optionaly show all Transitions
+  // a1.showTransitions = true;
+
+  a1.runSequence(userInput);
   
   return 0;
 }

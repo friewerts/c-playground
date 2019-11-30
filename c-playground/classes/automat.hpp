@@ -23,6 +23,7 @@ class Automat {
 private:
   string name;
   State* currentState;
+  State* finalState;
   
   void initStates() {
     // initialize States
@@ -49,9 +50,12 @@ private:
     s5->addNeighbour('1', s5);
 
     currentState = s1;
+    finalState = s5;
   }
   
 public:
+  bool showTransitions = false;
+
   Automat() {
     name = "Default Automat";
     initStates();
@@ -62,11 +66,24 @@ public:
     initStates();
   }
   
+  bool inFinalState() {
+    return currentState == finalState;
+  }
+  
+  void runSequence(string input) {
+    getState(input);
+
+    cout << (showTransitions ? "\n" : "") << "Machine finished in state: " << currentState->name << endl;
+    
+    cout << "This is" << (inFinalState() ? "" : " not") << " the final state!" << endl;
+  }
+  
   void getState(string input) {
+    cout << currentState->name;
     for (char const &c: input) {
       currentState = currentState->transition(c);
+      if (showTransitions) cout << " => " << currentState->name;
     }
-    cout << "The new State is: " << currentState->name << endl;
   }
   
   void printname() {
