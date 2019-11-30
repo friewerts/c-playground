@@ -8,8 +8,41 @@
 
 #include <iostream>
 
+using namespace std;
+
+class Automat {
+  
+public:
+  Automat() {
+    name = "Default Automat";
+  }
+  
+  Automat(string name) {
+    Automat::name = name;
+  }
+  
+  void printname() {
+    cout << "My name is: " << name;
+  }
+  
+private:
+  string name;
+  
+};
+
 int main(int argc, const char * argv[]) {
-  // insert code here...
-  std::cout << "Hello, World!\n";
+  
+  Automat a1;
+  
+  Automat a2("Automat 2");
+  
+  a1.printname();
+
+  cout << endl;
+
+  a2.printname();
+  
+  cout << endl;
+  
   return 0;
 }
