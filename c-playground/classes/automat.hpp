@@ -23,6 +23,12 @@ private:
   State* currentState;
   State* finalState;
   
+  void init(string name, bool showTransitions) {
+    Automat::name = name;
+    Automat::showTransitions = showTransitions;
+    initStates();
+  }
+  
   void initStates() {
     // initialize States
     State* s1 = new State("A");
@@ -55,19 +61,15 @@ public:
   bool showTransitions = false;
 
   Automat() {
-    name = "Default Automat";
-    initStates();
+    init("Default Automat", false);
   }
   
   Automat(string name) {
-    Automat::name = name;
-    initStates();
+    init(name, false);
   }
   
   Automat(string name, bool showTransitions) {
-    Automat::name = name;
-    Automat::showTransitions = showTransitions;
-    initStates();
+    init(name, showTransitions);
   }
   
   bool inFinalState() {
@@ -76,7 +78,7 @@ public:
   
   void runSequence(string input) {
     getState(input);
-    
+
     cout << "This is" << (inFinalState() ? "" : " not") << " the final state!" << endl;
   }
   

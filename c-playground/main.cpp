@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
 
   string userInput = getInputSequence();
 
-  Automat("a1", true).runSequence(userInput);
+  Automat("Automat 2", true).runSequence(userInput);
   
   return 0;
 }
