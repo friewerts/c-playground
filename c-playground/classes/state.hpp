@@ -21,7 +21,6 @@ private:
   map<char, State*> neighbours;
   
 public:
-
   State(string name) {
     State::name = name;
   }
@@ -39,7 +38,6 @@ public:
 
     return hasNeigbour ? neighbours.find(input)->second : this;
   }
-  
 };
 
 #endif /* state_hpp */

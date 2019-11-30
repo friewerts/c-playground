@@ -23,7 +23,7 @@ bool validateInput(string input) {
   return isValid;
 }
 
-string getSequence() {
+string getInputSequence() {
   string userInput;
   
   cout << "Enter Sequence: ";
@@ -35,7 +35,7 @@ string getSequence() {
   }
   else {
     cout << "Input invalid! Try again only using the digits 0 and 1." << endl;
-    return getSequence();
+    return getInputSequence();
   }
 }
 

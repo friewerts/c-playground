@@ -12,7 +12,6 @@
 
 using namespace std;
 
-
 int main(int argc, const char * argv[]) {
 
 //  Automat("2a").runSequence("0011");
@@ -21,7 +20,7 @@ int main(int argc, const char * argv[]) {
 //  Automat("2d").runSequence("001111000011101");
 //  Automat("2e").runSequence("110110101010010110100");
 
-  string userInput = getSequence();
+  string userInput = getInputSequence();
   
   Automat a1;
 
