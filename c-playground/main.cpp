@@ -13,17 +13,12 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-  
-  Automat a2a("Automat 2a");
-  Automat a2b("Automat 2b");
-  Automat a2c("Automat 2c");
-  Automat a2d("Automat 2d");
-  Automat a2e("Automat 2e");
-  
-  a2a.getState("0011");
-  a2b.getState("0011110011010");
-  a2c.getState("01100100101");
-  a2d.getState("001111000011101");
-  a2e.getState("110110101010010110100");
+
+  Automat("2a").getState("0011");
+  Automat("2b").getState("0011110011010");
+  Automat("2c").getState("01100100101");
+  Automat("2d").getState("001111000011101");
+  Automat("2e").getState("110110101010010110100");
+
   return 0;
 }
