@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2AC2C122392D7C900699019 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AC2C112392D7C900699019 /* main.cpp */; };
+		A2AC2C332393CBFB00699019 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AC2C322393CBFB00699019 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,18 +20,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		A2AC2C2E2393CBFB00699019 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A2AC2C0E2392D7C900699019 /* c-playground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "c-playground"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2AC2C112392D7C900699019 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A2AC2C1A2392D9EE00699019 /* automat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = automat.hpp; sourceTree = "<group>"; };
 		A2AC2C1C2392DD5000699019 /* state.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = state.hpp; sourceTree = "<group>"; };
 		A2AC2C1E239317DE00699019 /* io_helper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = io_helper.hpp; sourceTree = "<group>"; };
+		A2AC2C302393CBFB00699019 /* dtm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dtm; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AC2C322393CBFB00699019 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A2AC2C0B2392D7C900699019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AC2C2D2393CBFB00699019 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,7 +61,7 @@
 		A2AC2C052392D7C900699019 = {
 			isa = PBXGroup;
 			children = (
-				A2AC2C102392D7C900699019 /* c-playground */,
+				A2AC2C312393CBFB00699019 /* dtm */,
 				A2AC2C0F2392D7C900699019 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,18 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				A2AC2C0E2392D7C900699019 /* c-playground */,
+				A2AC2C302393CBFB00699019 /* dtm */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A2AC2C102392D7C900699019 /* c-playground */ = {
-			isa = PBXGroup;
-			children = (
-				A2AC2C1D239317A200699019 /* helper */,
-				A2AC2C182392D9C300699019 /* classes */,
-				A2AC2C112392D7C900699019 /* main.cpp */,
-			);
-			path = "c-playground";
 			sourceTree = "<group>";
 		};
 		A2AC2C182392D9C300699019 /* classes */ = {
@@ -82,6 +90,16 @@
 				A2AC2C1E239317DE00699019 /* io_helper.hpp */,
 			);
 			path = helper;
+			sourceTree = "<group>";
+		};
+		A2AC2C312393CBFB00699019 /* dtm */ = {
+			isa = PBXGroup;
+			children = (
+				A2AC2C1D239317A200699019 /* helper */,
+				A2AC2C182392D9C300699019 /* classes */,
+				A2AC2C322393CBFB00699019 /* main.cpp */,
+			);
+			path = dtm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +122,23 @@
 			productReference = A2AC2C0E2392D7C900699019 /* c-playground */;
 			productType = "com.apple.product-type.tool";
 		};
+		A2AC2C2F2393CBFB00699019 /* dtm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2AC2C362393CBFB00699019 /* Build configuration list for PBXNativeTarget "dtm" */;
+			buildPhases = (
+				A2AC2C2C2393CBFB00699019 /* Sources */,
+				A2AC2C2D2393CBFB00699019 /* Frameworks */,
+				A2AC2C2E2393CBFB00699019 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dtm;
+			productName = dtm;
+			productReference = A2AC2C302393CBFB00699019 /* dtm */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -114,6 +149,9 @@
 				ORGANIZATIONNAME = friewerts;
 				TargetAttributes = {
 					A2AC2C0D2392D7C900699019 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					A2AC2C2F2393CBFB00699019 = {
 						CreatedOnToolsVersion = 11.2;
 					};
 				};
@@ -132,6 +170,7 @@
 			projectRoot = "";
 			targets = (
 				A2AC2C0D2392D7C900699019 /* c-playground */,
+				A2AC2C2F2393CBFB00699019 /* dtm */,
 			);
 		};
 /* End PBXProject section */
@@ -141,7 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2AC2C122392D7C900699019 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2AC2C2C2393CBFB00699019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AC2C332393CBFB00699019 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +319,22 @@
 			};
 			name = Release;
 		};
+		A2AC2C342393CBFB00699019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2AC2C352393CBFB00699019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -290,6 +352,15 @@
 			buildConfigurations = (
 				A2AC2C162392D7C900699019 /* Debug */,
 				A2AC2C172392D7C900699019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2AC2C362393CBFB00699019 /* Build configuration list for PBXNativeTarget "dtm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AC2C342393CBFB00699019 /* Debug */,
+				A2AC2C352393CBFB00699019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
