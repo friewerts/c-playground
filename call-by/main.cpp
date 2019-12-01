@@ -10,12 +10,14 @@
 
 using namespace std;
 
-void addOne(int& number) {
+int addOne(int& number) {
   number = number + 1;
+  return number;
 }
 
-void addTwo(int number) {
+int addTwo(int number) {
   number = number + 2;
+  return number;
 }
 
 int main(int argc, const char * argv[]) {
@@ -23,14 +25,16 @@ int main(int argc, const char * argv[]) {
   int a = 1;
   
   // call by reference
-  addOne(a);
+  int b = addOne(a);
   
-  cout << "Added One: " << a << endl;
+  cout << "Added One a: " << a << endl;
+  cout << "Added One b: " << b << endl;
   
-  addTwo(a);
+  int c = addTwo(a);
   
   // call by value
-  cout << "Added Two: " << a << endl;
+  cout << "Added Two a: " << a << endl;
+  cout << "Added Two c: " << c << endl;
   
   return 0;
 }

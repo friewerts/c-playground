@@ -13,7 +13,7 @@
 
 using namespace std;
 
-bool validateInput(string input) {
+bool isBinary(string input) {
   bool isValid = true;
   
   for (char const &c: input) {
@@ -29,7 +29,7 @@ string getInputSequence() {
   cout << "Enter Sequence: ";
   cin >> userInput;
   
-  if (validateInput(userInput)) {
+  if (isBinary(userInput)) {
     cout << "Input valid!" << endl;
     return userInput;
   }
